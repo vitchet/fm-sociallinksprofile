@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Inter";
-    src: url("./fonts/Inter-VariableFont_slnt,wght");
+    src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
 /* || RESET */
@@ -25,6 +25,7 @@ img {
     --grey: hsl(0, 0%, 20%);
     --dark-grey: hsl(0, 0%, 12%);
     --off-black: hsl(0, 0%, 8%);
+    --green: hsl(75, 94%, 57%);
 
     /* Static Values */
     /* Note that values are presented without units. */
@@ -38,11 +39,89 @@ img {
     --font-size-max: calc(var(--screen-width-max) / var(--screen-width-base) * var(--font-size-base) * 1px);
     --font-size-val: calc(100vw / var(--screen-width-base) * var(--font-size-base));
 
-    --body-padding: 1.5rem;
+    --body-padding: 2.5rem;
 
     --width-min: calc(((var(--screen-width-min) * 1px) - (var(--body-padding) * 2)));
     --width-max: calc(((var(--screen-width-max) * 1px) - (var(--body-padding) * 2)));
     --width-val: calc(100vw - (var(--body-padding) * 2));
+}
+
+html {
+    font-size: 14px;
+    font-family: "Inter", "sans-serif";
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: var(--body-padding);
+    min-height: 100vh;
+    background-color: var(--dark-grey);
+}
+
+.social-links-profile-component {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 305px;
+    padding: 1rem;
+    background-color: var(--grey);
+    border-radius: 0.75rem;
+
+    .hero {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.8rem;
+
+        figure {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+
+            img {
+                width: 6rem;
+                border-radius: 100%;
+            }
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .place-from {
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .occupation {
+            color: var(--white);
+            font-weight: 200;
+            margin-top: 1.2rem;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .attribution {
