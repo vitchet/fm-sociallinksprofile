@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-VariableFont_slnt,wght");
+}
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+
+    /* Static Values */
+    /* Note that values are presented without units. */
+    --screen-width-base: 375;
+    --screen-width-min: 320;
+    --screen-width-max: 770;
+    --font-size-base: 14;
+
+    /* Calculated Values */
+    --font-size-min: calc(var(--screen-width-min) / var(--screen-width-base) * var(--font-size-base) * 1px);
+    --font-size-max: calc(var(--screen-width-max) / var(--screen-width-base) * var(--font-size-base) * 1px);
+    --font-size-val: calc(100vw / var(--screen-width-base) * var(--font-size-base));
+
+    --body-padding: 1.5rem;
+
+    --width-min: calc(((var(--screen-width-min) * 1px) - (var(--body-padding) * 2)));
+    --width-max: calc(((var(--screen-width-max) * 1px) - (var(--body-padding) * 2)));
+    --width-val: calc(100vw - (var(--body-padding) * 2));
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
