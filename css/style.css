@@ -31,7 +31,7 @@ img {
     /* Note that values are presented without units. */
     --screen-width-base: 375;
     --screen-width-min: 320;
-    --screen-width-max: 770;
+    --screen-width-max: 480;
     --font-size-base: 14;
 
     /* Calculated Values */
@@ -47,7 +47,7 @@ img {
 }
 
 html {
-    font-size: 14px;
+    font-size: clamp(var(--font-size-min), var(--font-size-val), var(--font-size-max));
     font-family: "Inter", "sans-serif";
 }
 
@@ -68,7 +68,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
-    width: 305px;
+    width: clamp(var(--width-min), var(--width-val), var(--width-max));
     padding: 0.75rem;
     background-color: var(--dark-grey);
     border-radius: 0.75rem;
@@ -159,7 +159,7 @@ body {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.75rem;
     text-align: center;
     color: lightgrey;
 }
