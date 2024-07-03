@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/vitchet/fm-sociallinksprofile
-- Live Site URL: https://vitchet.github.io/fm-sociallinksprofile/
+- Live Site URL: https://vitchet.github.io/fm-sociallinksprofile
 
 ### Built with
 
