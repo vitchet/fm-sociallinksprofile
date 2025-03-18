@@ -15,7 +15,7 @@
 
 <body class="v-container justify-center bg-off-black min-h-screen pl-7 pr-6 pb-2">
   <main class="v-container justify-center w-full grow-1 shrink-0 text-sm">
-    <article id="social-link-app" class="v-container w-full font-inter bg-dark-grey text-white p-6 gap-6 rounded-xl">
+    <article id="social-link-app" class="v-container w-full max-w-[375px] font-inter bg-dark-grey text-white p-6 gap-6 rounded-xl">
       <header class="v-container items-center gap-7">
         <figure>
           <img :src="'assets/images/' + data.heroImage" alt="hero" width="176" height="176" class="w-22 rounded-full">
@@ -29,7 +29,7 @@
 
       <nav class="w-full v-container gap-4">
         <ul v-for="link in data.links" class="w-full">
-          <li><a href="#" class="block w-full bg-grey text-center font-semibold p-3 rounded-lg">{{ link }}</a></li>
+          <li><a href="#" class="block w-full bg-grey text-center font-semibold p-3 rounded-lg hover:bg-green hover:text-dark-grey focus:bg-green focus:text-dark-grey">{{ link }}</a></li>
         </ul>
       </nav>
     </article>

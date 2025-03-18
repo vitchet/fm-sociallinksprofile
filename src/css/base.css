@@ -1,7 +1,7 @@
 @layer base {
     
     :root {
-        font-size: 16px;
+        font-size: clamp(calc(0.85* 16px), 4.265vw, calc(1.15 * 16px));
     }
 
     @font-face {

@@ -196,6 +196,9 @@
   .contents {
     display: contents;
   }
+  .table {
+    display: table;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -205,11 +208,29 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[375px\] {
+    max-width: 375px;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow-1 {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -237,6 +258,10 @@
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-dark-grey {
     background-color: var(--color-dark-grey);
@@ -301,17 +326,73 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .caret-off-black {
+    caret-color: var(--color-off-black);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .hover\:bg-green {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green);
+      }
+    }
+  }
+  .hover\:text-dark-grey {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-dark-grey);
+      }
+    }
+  }
+  .hover\:text-green {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green);
+      }
+    }
+  }
+  .focus\:bg-green {
+    &:focus {
+      background-color: var(--color-green);
+    }
+  }
+  .focus\:text-dark-grey {
+    &:focus {
+      color: var(--color-dark-grey);
+    }
+  }
+  .focus\:text-green {
+    &:focus {
+      color: var(--color-green);
+    }
+  }
 }
 @layer base {
   :root {
-    font-size: 16px;
+    font-size: clamp(calc(0.85* 16px), 4.265vw, calc(1.15 * 16px));
   }
   @font-face {
     font-family: Inter;
     src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
