@@ -1,9 +1,13 @@
 @theme {
     --color-*: initial;
+    --color-green:  hsl(75, 94%, 57%);
     --color-white: hsl(0, 0%, 100%);
-    --color-grey: (0, 0%, 20%);
+    --color-grey: hsl(0, 0%, 20%);
     --color-dark-grey: hsl(0, 0%, 12%);
     --color-off-black: hsl(0, 0%, 8%);
+    --color-blue: hsl(218, 41%, 48%) ;
 
     --font-inter: Inter, "sans-serif";
+
+    --text-3xl: 1.75rem;
 }

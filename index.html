@@ -13,31 +13,31 @@
   <title>Frontend Mentor | Social links profile</title>
 </head>
 
-<body>
-  <main>
-    <article id="social-link-app" class="font-inter">
-      <header>
+<body class="v-container justify-center bg-off-black min-h-screen pl-7 pr-6 pb-2">
+  <main class="v-container justify-center w-full grow-1 shrink-0 text-sm">
+    <article id="social-link-app" class="v-container w-full font-inter bg-dark-grey text-white p-6 gap-6 rounded-xl">
+      <header class="v-container items-center gap-7">
         <figure>
-          <img :src="'assets/images/' + data.heroImage" alt="hero" width="176" height="176">
-          <caption>
-            <h2>{{ data.name }}</h2>
-          </caption>
+          <img :src="'assets/images/' + data.heroImage" alt="hero" width="176" height="176" class="w-22 rounded-full">
         </figure>
-        <p>{{ data.location }}</p>
-        <p>{{ data.occupation }}</p>
+        <div class="v-container items-center gap-2">
+          <h1 class="text-2xl font-medium">{{ data.name }}</h1>
+          <p class="text-green font-semibold">{{ data.location }}</p>
+        </div>
+          <p class="font-normal">"{{ data.occupation }}"</p>
       </header>
 
-      <nav>
-        <ul v-for="link in data.links">
-          <li><a href=#>{{ link }}</a></li>
+      <nav class="w-full v-container gap-4">
+        <ul v-for="link in data.links" class="w-full">
+          <li><a href="#" class="block w-full bg-grey text-center font-semibold p-3 rounded-lg">{{ link }}</a></li>
         </ul>
       </nav>
     </article>
   </main>
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Vitaly Chetverikov</a>.
+  <footer class="attribution text-xs text-white">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue">Frontend Mentor</a>.
+    Coded by <a href="#" class="text-blue">Vitaly Chetverikov</a>.
   </footer>
 
   <script src="js/main.js" type="module"></script>
